@@ -217,6 +217,19 @@ export class SiteHeader extends LitElement {
               <a href="/organisering/vedtekter" role="menuitem">Vedtekter</a>
             </div>
           </div>
+          <div class="dropdown">
+            <button class="dropdown-button" type="button">Informasjon</button>
+            <div class="dropdown-menu" role="menu" aria-label="Informasjon">
+              <a href="/informasjon/gjest-i-havna" role="menuitem">Gjest i havna</a>
+              <a href="/informasjon/severdigheter" role="menuitem">Severdigheter</a>
+              <a href="/informasjon/slipoppsett" role="menuitem">Slipoppsett</a>
+              <a href="/informasjon/oppstilling-landomrade" role="menuitem">Oppstilling landområde</a>
+              <a href="/informasjon/vare-priser" role="menuitem">Våre priser</a>
+              <a href="/informasjon/bilder" role="menuitem">Bilder</a>
+              <a href="https://www.havneweb.no/mosjoenbf/?mod=sokplass" target="_blank" rel="noopener" role="menuitem">Bli medlem i båtforeningen</a>
+              <a href="https://app.havneweb.no/login/loginreg" target="_blank" rel="noopener" role="menuitem">Login havneweb</a>
+            </div>
+          </div>
         </nav>
 
         <div class="actions">
