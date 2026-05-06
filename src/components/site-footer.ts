@@ -197,11 +197,10 @@ export class SiteFooter extends LitElement {
         <section>
           <h2>Hurtiglenker</h2>
           <nav class="footer-links" aria-label="Hurtiglenker">
-            <a href="#">Havnen</a>
-            <a href="#">Fasiliteter</a>
-            <a href="#">Medlemskap</a>
+            <a href="/">Hjem</a>
+            <a href="/organisering/kontaktpersoner">Kontaktpersoner</a>
+            <a href="/organisering/vedtekter">Vedtekter</a>
             <a href="#om-oss">Om oss</a>
-            <a href="#">Nyheter</a>
             <a href="#kontakt">Kontakt</a>
           </nav>
         </section>

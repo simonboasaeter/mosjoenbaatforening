@@ -5,6 +5,9 @@ import "./components/site-header";
 import "./components/hero-section";
 import "./components/about-section";
 import "./components/site-footer";
+import "./components/kontaktpersoner-page";
+import "./components/vedtekter-page";
+import "./components/informasjon-pages";
 
 @customElement("landing-page")
 export class LandingPage extends LitElement {
@@ -29,12 +32,32 @@ export class LandingPage extends LitElement {
   `;
 
   public render() {
+    const pathName = window.location.pathname;
+
     return html`
       <site-header></site-header>
 
       <main>
-        <hero-section></hero-section>
-        <about-section></about-section>
+        ${pathName === "/organisering/kontaktpersoner"
+          ? html`<kontaktpersoner-page></kontaktpersoner-page>`
+          : pathName === "/organisering/vedtekter"
+            ? html`<vedtekter-page></vedtekter-page>`
+            : pathName === "/informasjon/gjest-i-havna"
+              ? html`<gjest-i-havna-page></gjest-i-havna-page>`
+              : pathName === "/informasjon/severdigheter"
+                ? html`<severdigheter-page></severdigheter-page>`
+                : pathName === "/informasjon/slipoppsett"
+                  ? html`<slipoppsett-page></slipoppsett-page>`
+                  : pathName === "/informasjon/oppstilling-landomrade"
+                    ? html`<oppstilling-page></oppstilling-page>`
+                    : pathName === "/informasjon/vare-priser"
+                      ? html`<vare-priser-page></vare-priser-page>`
+                      : pathName === "/informasjon/bilder"
+                        ? html`<bilder-page></bilder-page>`
+            : html`
+                <hero-section></hero-section>
+                <about-section></about-section>
+              `}
       </main>
 
       <site-footer></site-footer>
