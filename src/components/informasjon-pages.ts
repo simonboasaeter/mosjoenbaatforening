@@ -62,8 +62,8 @@ const shared = css`
 
 @customElement("gjest-i-havna-page")
 export class GjestIHavnaPage extends LitElement {
-  public static styles = shared;
-  public render() {
+  static styles = shared;
+  render() {
     return html`<section>
       <h1>Velkommen som gjest i Pålgarden Marina</h1>
       <h2>Dette kan vi tilby:</h2>
@@ -116,7 +116,7 @@ export class GjestIHavnaPage extends LitElement {
 
 @customElement("severdigheter-page")
 export class SeverdigheterPage extends LitElement {
-  public static styles = [
+  static styles = [
     shared,
     css`
       .layout {
@@ -137,7 +137,7 @@ export class SeverdigheterPage extends LitElement {
       }
     `,
   ];
-  public render() {
+  render() {
     return html`<section>
       <h1>Atraksjoner / severdigheter - Mosjøen</h1>
       <p>Linker til opplevelser i Mosjøen og omeng:</p>
@@ -163,8 +163,8 @@ export class SeverdigheterPage extends LitElement {
 
 @customElement("slipoppsett-page")
 export class SlipoppsettPage extends LitElement {
-  public static styles = shared;
-  public render() {
+  static styles = shared;
+  render() {
     return html`<section>
       <h1>Vi tilbyr muligheter for slipoppsett</h1>
       <img
@@ -223,13 +223,13 @@ export class SlipoppsettPage extends LitElement {
 
 @customElement("oppstilling-page")
 export class OppstillingPage extends LitElement {
-  public static styles = shared;
-  public render() {
+  static styles = shared;
+  render() {
     return html`<section>
       <h1>Oppstilling av båter/hengere på landområdet</h1>
       <img
         class="feature-img"
-        src="/images/båtoppsett.bmp"
+        src="/images/båtplass.jpg"
         alt="Oppstilling av båter på landområde"
       />
     </section>`;
@@ -238,8 +238,8 @@ export class OppstillingPage extends LitElement {
 
 @customElement("vare-priser-page")
 export class VarePriserPage extends LitElement {
-  public static styles = shared;
-  public render() {
+  static styles = shared;
+  render() {
     return html`<section>
       <h1>Priser</h1>
       <div class="card">
@@ -264,8 +264,8 @@ export class VarePriserPage extends LitElement {
 
 @customElement("bilder-page")
 export class BilderPage extends LitElement {
-  public static styles = shared;
-  public render() {
+  static styles = shared;
+  render() {
     return html`<section>
       <h1>Bilder</h1>
       <div class="media-grid">

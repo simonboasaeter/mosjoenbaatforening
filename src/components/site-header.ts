@@ -220,37 +220,34 @@ export class SiteHeader extends LitElement {
           <div class="dropdown">
             <button class="dropdown-button" type="button">Informasjon</button>
             <div class="dropdown-menu" role="menu" aria-label="Informasjon">
-              <a href="/informasjon/gjest-i-havna" role="menuitem">Gjest i havna</a>
-              <a href="/informasjon/severdigheter" role="menuitem">Severdigheter</a>
+              <a href="/informasjon/gjest-i-havna" role="menuitem"
+                >Gjest i havna</a
+              >
+              <a href="/informasjon/severdigheter" role="menuitem"
+                >Severdigheter</a
+              >
               <a href="/informasjon/slipoppsett" role="menuitem">Slipoppsett</a>
-              <a href="/informasjon/oppstilling-landomrade" role="menuitem">Oppstilling landområde</a>
+              <a href="/informasjon/oppstilling-landomrade" role="menuitem"
+                >Oppstilling landområde</a
+              >
               <a href="/informasjon/vare-priser" role="menuitem">Våre priser</a>
               <a href="/informasjon/bilder" role="menuitem">Bilder</a>
-              <a href="https://www.havneweb.no/mosjoenbf/?mod=sokplass" target="_blank" rel="noopener" role="menuitem">Bli medlem i båtforeningen</a>
-              <a href="https://app.havneweb.no/login/loginreg" target="_blank" rel="noopener" role="menuitem">Login havneweb</a>
+              <a
+                href="https://www.havneweb.no/mosjoenbf/?mod=sokplass"
+                target="_blank"
+                rel="noopener"
+                role="menuitem"
+                >Bli medlem i båtforeningen</a
+              >
+              <a
+                href="https://app.havneweb.no/login/loginreg"
+                target="_blank"
+                rel="noopener"
+                role="menuitem"
+                >Login havneweb</a
+              >
             </div>
           </div>
-          <div class="dropdown">
-            <button class="dropdown-button" type="button">Reglement</button>
-            <div class="dropdown-menu" role="menu" aria-label="Reglement">
-              <a href="/reglement/hms-plan" role="menuitem">HMS plan</a>
-              <a href="/reglement/fortoyning" role="menuitem">Fortøyning</a>
-              <a href="/reglement/beredskapsplan" role="menuitem">Beredskapsplan</a>
-              <a href="/reglement/avfallshandtering" role="menuitem">Avfallshåndtering</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropdown-button" type="button">Linker</button>
-            <div class="dropdown-menu" role="menu" aria-label="Linker">
-              <a href="https://www.facebook.com/mosjoenbf/" target="_blank" rel="noopener" role="menuitem">MBF – Facebook</a>
-              <a href="https://www.kartverket.no/til-sjos/se-havniva/tidevann-og-vannstand" target="_blank" rel="noopener" role="menuitem">Tidevann – Mosjøen</a>
-              <a href="https://www.redningsselskapet.no/" target="_blank" rel="noopener" role="menuitem">Redningsselskapet</a>
-              <a href="https://velihavn.no/" target="_blank" rel="noopener" role="menuitem">Vel i Havn</a>
-              <a href="https://knbf.no/" target="_blank" rel="noopener" role="menuitem">KNBF</a>
-            </div>
-          </div>
-          <a href="/historie">Historie</a>
-          <a href="/webkamera">Webkamera</a>
         </nav>
 
         <div class="actions">

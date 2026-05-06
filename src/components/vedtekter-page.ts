@@ -3,7 +3,7 @@ import { customElement } from "lit/decorators.js";
 
 @customElement("vedtekter-page")
 export class VedtekterPage extends LitElement {
-  public static styles = css`
+  static styles = css`
     :host {
       display: block;
     }
@@ -41,7 +41,7 @@ export class VedtekterPage extends LitElement {
     }
   `;
 
-  public render() {
+  render() {
     return html`<section aria-labelledby="vedtekter-title">
       <h1 id="vedtekter-title">Vedtekter - Mosjøen båtforening</h1>
       <p>Nedenfor kan du laste ned våre vedtekter som PDF</p>
