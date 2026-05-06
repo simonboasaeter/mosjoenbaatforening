@@ -233,13 +233,22 @@ export class SiteHeader extends LitElement {
           <div class="dropdown">
             <button class="dropdown-button" type="button">Reglement</button>
             <div class="dropdown-menu" role="menu" aria-label="Reglement">
-              <a href="/reglement" role="menuitem">HMS plan</a>
-              <a href="/reglement" role="menuitem">Fortøyning</a>
-              <a href="/reglement" role="menuitem">Beredskapsplan</a>
-              <a href="/reglement" role="menuitem">Avfallshåndtering</a>
+              <a href="/reglement/hms-plan" role="menuitem">HMS plan</a>
+              <a href="/reglement/fortoyning" role="menuitem">Fortøyning</a>
+              <a href="/reglement/beredskapsplan" role="menuitem">Beredskapsplan</a>
+              <a href="/reglement/avfallshandtering" role="menuitem">Avfallshåndtering</a>
             </div>
           </div>
-          <a href="/linker">Linker</a>
+          <div class="dropdown">
+            <button class="dropdown-button" type="button">Linker</button>
+            <div class="dropdown-menu" role="menu" aria-label="Linker">
+              <a href="https://www.facebook.com/mosjoenbf/" target="_blank" rel="noopener" role="menuitem">MBF – Facebook</a>
+              <a href="https://www.kartverket.no/til-sjos/se-havniva/tidevann-og-vannstand" target="_blank" rel="noopener" role="menuitem">Tidevann – Mosjøen</a>
+              <a href="https://www.redningsselskapet.no/" target="_blank" rel="noopener" role="menuitem">Redningsselskapet</a>
+              <a href="https://velihavn.no/" target="_blank" rel="noopener" role="menuitem">Vel i Havn</a>
+              <a href="https://knbf.no/" target="_blank" rel="noopener" role="menuitem">KNBF</a>
+            </div>
+          </div>
           <a href="/historie">Historie</a>
           <a href="/webkamera">Webkamera</a>
         </nav>

@@ -55,10 +55,14 @@ export class LandingPage extends LitElement {
                       ? html`<vare-priser-page></vare-priser-page>`
                       : pathName === "/informasjon/bilder"
                         ? html`<bilder-page></bilder-page>`
-                        : pathName === "/reglement"
+                        : pathName === "/reglement/hms-plan"
                           ? html`<reglement-page></reglement-page>`
-                          : pathName === "/linker"
-                            ? html`<linker-page></linker-page>`
+                          : pathName === "/reglement/fortoyning"
+                            ? html`<fortoyning-page></fortoyning-page>`
+                            : pathName === "/reglement/beredskapsplan"
+                              ? html`<beredskapsplan-page></beredskapsplan-page>`
+                              : pathName === "/reglement/avfallshandtering"
+                                ? html`<avfallshandtering-page></avfallshandtering-page>`
                             : pathName === "/historie"
                               ? html`<historie-page></historie-page>`
                               : pathName === "/webkamera"
