@@ -230,6 +230,18 @@ export class SiteHeader extends LitElement {
               <a href="https://app.havneweb.no/login/loginreg" target="_blank" rel="noopener" role="menuitem">Login havneweb</a>
             </div>
           </div>
+          <div class="dropdown">
+            <button class="dropdown-button" type="button">Reglement</button>
+            <div class="dropdown-menu" role="menu" aria-label="Reglement">
+              <a href="/reglement" role="menuitem">HMS plan</a>
+              <a href="/reglement" role="menuitem">Fortøyning</a>
+              <a href="/reglement" role="menuitem">Beredskapsplan</a>
+              <a href="/reglement" role="menuitem">Avfallshåndtering</a>
+            </div>
+          </div>
+          <a href="/linker">Linker</a>
+          <a href="/historie">Historie</a>
+          <a href="/webkamera">Webkamera</a>
         </nav>
 
         <div class="actions">
