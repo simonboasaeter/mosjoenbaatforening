@@ -54,10 +54,10 @@ export class LandingPage extends LitElement {
                       ? html`<vare-priser-page></vare-priser-page>`
                       : pathName === "/informasjon/bilder"
                         ? html`<bilder-page></bilder-page>`
-            : html`
-                <hero-section></hero-section>
-                <about-section></about-section>
-              `}
+                        : html`
+                            <hero-section></hero-section>
+                            <about-section></about-section>
+                          `}
       </main>
 
       <site-footer></site-footer>
