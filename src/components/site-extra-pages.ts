@@ -28,8 +28,17 @@ export class AvfallshandteringPage extends LitElement { public static styles = p
 
 @customElement("historie-page")
 export class HistoriePage extends LitElement {
-  public static styles = pageStyles;
-  public render() { return html`<section class="page-section"><h1 class="page-title">Historie</h1><p class="lead-text">Les hele historien om Mosjøen båtforening via siden under.</p><iframe src="https://www.mosjoenbf.no/historie-mosjoen-batforening/" title="Historie Mosjøen båtforening" loading="lazy"></iframe></section>`; }
+  public static styles = [
+    pageStyles,
+    css`
+      .history-layout { display:grid; grid-template-columns:1fr; gap:20px; }
+      .history-image { width:100%; border-radius:12px; object-fit:cover; min-height:280px; }
+      .history-list { margin:0; padding-left:20px; }
+      .history-links { display:grid; gap:10px; margin-top:16px; }
+      @media(min-width:950px){ .history-layout{ grid-template-columns:1.3fr 1fr; align-items:start; } }
+    `,
+  ];
+  public render() { return html`<section class="page-section"><h1 class="page-title">Historie - Mosjøen båtforening</h1><div class="history-layout"><article class="content-card"><h2>Utviklingen</h2><ul class="history-list"><li>1960 – Mosjøen båtforening ble stiftet</li><li>1963 – Organisert havn bak Flokkmann</li><li>1980 – Første fellestur – den gikk til Rødøyvågen</li><li>1986 – Ny havn mudret ved Baustein</li><li>1990 – Steinmolo rundt havna og offisiell åpning</li><li>1991 – Dieselfylling i havna</li><li>1993 – Mudring og bygging av brygge 3</li><li>1997 – Havna ble utvidet østover (mot landsida)</li><li>2000 – Opphalingshus og slip</li><li>2008 – Oppstart av stedsutviklingsprosjekt</li><li>2009 – Ny gjestebrygge</li><li>2011 – Ny brygge 2 og 3</li><li>2012 – Ny brygge 1</li><li>2013 – Fyrlykt på plass med lys</li><li>2016 – Drivstoffanlegg for bensin og diesel samt ferdigstillelse av kaifront</li><li>2019 – Nytt klubbhus</li><li>2021 – Asfaltering og oppmerking av p-plass</li><li>2021 – Oppretting av bobilparkering</li></ul><div class="history-links"><a class="resource-link" href="#">Klikk her for historiske bilder</a><a class="resource-link" href="#">Historien -> Mosjøen båtforening</a><a class="resource-link" href="#">Ledere Mosjøen båtforening</a></div></article><img class="history-image" src="/images/hero.jpg" alt="Historisk motiv fra Mosjøen båtforening" /></div></section>`; }
 }
 
 @customElement("webkamera-page")
