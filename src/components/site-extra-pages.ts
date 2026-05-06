@@ -43,6 +43,15 @@ const pageStyles = css`
     border: 0;
     border-radius: 12px;
   }
+  .camera-placeholder {
+    min-height: 180px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #e2e8f0, #f8fafc);
+    display: grid;
+    place-items: center;
+    font-size: 48px;
+    color: #0f172a;
+  }
   @media (min-width: 900px) {
     .card-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -196,70 +205,62 @@ export class HistoriePage extends LitElement {
     </section>`;
   }
 }
-
 @customElement("webkamera-page")
 export class WebkameraPage extends LitElement {
   public static styles = pageStyles;
+
+  private readonly cameras = [
+    {
+      title: "Kamera gjestehavn",
+      previewImageUrl: "http://51.175.40.173:201/jpg/image.jpg",
+      cameraUrl:
+        "http://51.175.40.173:201/view/view.shtml?id=2&imagepath=%2Fmjpg%2Fvideo.mjpg&size=1",
+    },
+    {
+      title: "Kamera havn",
+      previewImageUrl: "http://51.175.40.173:200/jpg/image.jpg",
+      cameraUrl:
+        "http://51.175.40.173:200/view/view.shtml?id=2&imagepath=%2Fmjpg%2Fvideo.mjpg&size=1",
+    },
+    {
+      title: "Kamera parkering",
+      previewImageUrl: "http://51.175.40.173:203/jpg/image.jpg",
+      cameraUrl:
+        "http://51.175.40.173:203/view/view.shtml?id=2&imagepath=%2Fmjpg%2Fvideo.mjpg&size=1",
+    },
+  ];
+
   public render() {
-    return html`<section class="page-section">
-      <h1 class="page-title">Webkamera Mosjøen Båtforening</h1>
-      <p class="lead-text">
-        Forhåndsvisning hentes direkte fra kameraene. Klikk på knapp for full
-        visning.
-      </p>
-      <div class="card-grid">
-        <article class="content-card">
-          <h2>Kamera gjestehavn</h2>
-          <img
-            class="camera-image"
-            src="http://51.175.40.173:201/mjpg/video.mjpg"
-            alt="Forhåndsvisning fra kamera gjestehavn"
-          />
-          <p>
-            <a
-              class="resource-link"
-              href="http://51.175.40.173:201/view/view.shtml?id=2&imagepath=%2Fmjpg%2Fvideo.mjpg&size=1"
-              target="_blank"
-              rel="noopener"
-              >Åpne Kamera gjestehavn</a
-            >
-          </p>
-        </article>
-        <article class="content-card">
-          <h2>Kamera Havn</h2>
-          <img
-            class="camera-image"
-            src="http://51.175.40.173:200/mjpg/video.mjpg"
-            alt="Forhåndsvisning fra kamera havn"
-          />
-          <p>
-            <a
-              class="resource-link"
-              href="http://51.175.40.173:200/view/view.shtml?id=2&imagepath=%2Fmjpg%2Fvideo.mjpg&size=1"
-              target="_blank"
-              rel="noopener"
-              >Åpne Kamera Havn</a
-            >
-          </p>
-        </article>
-        <article class="content-card">
-          <h2>Kamera parkering</h2>
-          <img
-            class="camera-image"
-            src="http://51.175.40.173:203/mjpg/video.mjpg"
-            alt="Forhåndsvisning fra kamera parkering"
-          />
-          <p>
-            <a
-              class="resource-link"
-              href="http://51.175.40.173:203/view/view.shtml?id=2&imagepath=%2Fmjpg%2Fvideo.mjpg&size=1"
-              target="_blank"
-              rel="noopener"
-              >Åpne Kamera parkering</a
-            >
-          </p>
-        </article>
-      </div>
-    </section>`;
+    return html`
+      <section class="page-section">
+        <h1 class="page-title">Webkamera Mosjøen Båtforening</h1>
+
+        <div class="card-grid">
+          ${this.cameras.map(
+            (camera) => html`
+              <article class="content-card">
+                <img
+                  class="camera-image"
+                  src="${camera.previewImageUrl}"
+                  alt="${camera.title}"
+                  loading="lazy"
+                />
+
+                <h2>${camera.title}</h2>
+
+                <a
+                  class="resource-link"
+                  href="${camera.cameraUrl}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Åpne direktesending
+                </a>
+              </article>
+            `,
+          )}
+        </div>
+      </section>
+    `;
   }
 }
