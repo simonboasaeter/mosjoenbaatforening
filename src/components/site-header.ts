@@ -62,7 +62,7 @@ export class SiteHeader extends LitElement {
       font-weight: 600;
     }
 
-    nav {
+    .navigation {
       display: flex;
       align-items: center;
       gap: 34px;
@@ -70,13 +70,56 @@ export class SiteHeader extends LitElement {
       font-weight: 600;
     }
 
-    nav a {
+    .navigation a,
+    .dropdown-button {
       color: #0f172a;
       text-decoration: none;
+      font: inherit;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      padding: 0;
     }
 
-    nav a:hover {
+    .navigation a:hover,
+    .dropdown-button:hover {
       color: #dc2626;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 12px);
+      left: 0;
+      min-width: 220px;
+      background: white;
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      border-radius: 8px;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.16);
+      padding: 8px;
+      display: none;
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+      display: grid;
+      gap: 4px;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 6px;
+    }
+
+    .dropdown-menu a:hover,
+    .dropdown-menu a:focus-visible {
+      background: #f1f5f9;
+      color: #082f49;
+      outline: none;
     }
 
     .actions {
@@ -112,7 +155,7 @@ export class SiteHeader extends LitElement {
     }
 
     @media (max-width: 1000px) {
-      nav {
+      .navigation {
         display: none;
       }
 
@@ -147,14 +190,24 @@ export class SiteHeader extends LitElement {
           </span>
         </a>
 
-        <nav aria-label="Hovedmeny">
-          <a href="#">Hjem</a>
-          <a href="#om-oss">Om oss</a>
-          <a href="#">Havnen</a>
-          <a href="#">Fasiliteter</a>
-          <a href="#">Medlemskap</a>
-          <a href="#">Nyheter</a>
-          <a href="#kontakt">Kontakt</a>
+        <nav class="navigation" aria-label="Hovedmeny">
+          <a href="/">Hjem</a>
+          <div class="dropdown">
+            <button
+              class="dropdown-button"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Organisering
+            </button>
+            <div class="dropdown-menu" role="menu" aria-label="Organisering">
+              <a href="/organisering/kontaktpersoner" role="menuitem"
+                >Kontaktpersoner</a
+              >
+              <a href="/organisering/vedtekter" role="menuitem">Vedtekter</a>
+            </div>
+          </div>
         </nav>
 
         <div class="actions">
