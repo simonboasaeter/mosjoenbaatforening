@@ -90,9 +90,18 @@ export class SiteHeader extends LitElement {
       position: relative;
     }
 
+    .dropdown::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      height: 12px;
+    }
+
     .dropdown-menu {
       position: absolute;
-      top: calc(100% + 12px);
+      top: calc(100% + 8px);
       left: 0;
       min-width: 220px;
       background: white;
