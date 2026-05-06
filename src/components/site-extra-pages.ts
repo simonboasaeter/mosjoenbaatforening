@@ -203,22 +203,61 @@ export class WebkameraPage extends LitElement {
   public render() {
     return html`<section class="page-section">
       <h1 class="page-title">Webkamera Mosjøen Båtforening</h1>
+      <p class="lead-text">
+        Forhåndsvisning hentes direkte fra kameraene. Klikk på knapp for full
+        visning.
+      </p>
       <div class="card-grid">
         <article class="content-card">
           <h2>Kamera gjestehavn</h2>
           <img
             class="camera-image"
-            src="http://mosjoenbf.axiscam.net:203/axis-cgi/jpg/image.cgi"
-            alt="Webkamera ved gjestehavn"
+            src="http://51.175.40.173:201/mjpg/video.mjpg"
+            alt="Forhåndsvisning fra kamera gjestehavn"
           />
+          <p>
+            <a
+              class="resource-link"
+              href="http://51.175.40.173:201/view/view.shtml?id=2&imagepath=%2Fmjpg%2Fvideo.mjpg&size=1"
+              target="_blank"
+              rel="noopener"
+              >Åpne Kamera gjestehavn</a
+            >
+          </p>
         </article>
         <article class="content-card">
-          <h2>Kamera havn</h2>
+          <h2>Kamera Havn</h2>
           <img
             class="camera-image"
-            src="http://mosjoenbf.axiscam.net:203/axis-cgi/jpg/image.cgi"
-            alt="Webkamera i havneområdet"
+            src="http://51.175.40.173:200/mjpg/video.mjpg"
+            alt="Forhåndsvisning fra kamera havn"
           />
+          <p>
+            <a
+              class="resource-link"
+              href="http://51.175.40.173:200/view/view.shtml?id=2&imagepath=%2Fmjpg%2Fvideo.mjpg&size=1"
+              target="_blank"
+              rel="noopener"
+              >Åpne Kamera Havn</a
+            >
+          </p>
+        </article>
+        <article class="content-card">
+          <h2>Kamera parkering</h2>
+          <img
+            class="camera-image"
+            src="http://51.175.40.173:203/mjpg/video.mjpg"
+            alt="Forhåndsvisning fra kamera parkering"
+          />
+          <p>
+            <a
+              class="resource-link"
+              href="http://51.175.40.173:203/view/view.shtml?id=2&imagepath=%2Fmjpg%2Fvideo.mjpg&size=1"
+              target="_blank"
+              rel="noopener"
+              >Åpne Kamera parkering</a
+            >
+          </p>
         </article>
       </div>
     </section>`;
