@@ -4,40 +4,51 @@ import { customElement } from "lit/decorators.js";
 const shared = css`
   :host {
     display: block;
+    background:
+      radial-gradient(circle at 90% 8%, rgba(8, 47, 73, 0.08), transparent 280px),
+      #f8fafc;
   }
   section {
-    max-width: 1100px;
+    max-width: 1120px;
     margin: 0 auto;
-    padding: 64px 24px;
+    padding: 68px 24px;
   }
   h1 {
-    margin: 0 0 16px;
-    color: #082f49;
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin: 0 0 18px;
+    color: #102a43;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.1rem, 4vw, 3.1rem);
+    line-height: 1.04;
+    letter-spacing: -0.035em;
   }
   h2 {
     margin: 24px 0 10px;
+    color: #0f2b45;
   }
   p,
   li {
-    line-height: 1.6;
+    line-height: 1.7;
     color: #334155;
   }
   .card {
-    background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 16px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid #d8e3ef;
+    border-radius: 14px;
+    padding: 24px;
+    margin: 18px 0;
+    box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08);
   }
   .btn {
     display: inline-block;
-    background: #0c4a6e;
+    background: #dc2626;
     color: #fff;
     text-decoration: none;
-    padding: 12px 18px;
+    padding: 12px 20px;
     border-radius: 8px;
-    font-weight: 700;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 0.8rem;
   }
   .media-grid {
     display: grid;

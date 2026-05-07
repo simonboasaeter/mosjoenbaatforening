@@ -4,16 +4,22 @@ import { customElement } from "lit/decorators.js";
 const pageStyles = css`
   :host {
     display: block;
+    background:
+      radial-gradient(circle at 6% 0%, rgba(8, 47, 73, 0.1), transparent 260px),
+      #f8fafc;
   }
   .page-section {
-    max-width: 1100px;
+    max-width: 1120px;
     margin: 0 auto;
-    padding: 64px 24px;
+    padding: 68px 24px;
   }
   .page-title {
     margin: 0 0 16px;
-    color: #082f49;
-    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: #102a43;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: -0.03em;
+    line-height: 1.04;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
   }
   .lead-text {
     color: #334155;
@@ -26,15 +32,19 @@ const pageStyles = css`
     margin-top: 20px;
   }
   .content-card {
-    background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid #d8e3ef;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08);
   }
   .resource-link {
     color: #0c4a6e;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: 0.8rem;
   }
   iframe,
   .camera-image {
