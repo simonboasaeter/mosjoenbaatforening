@@ -89,18 +89,6 @@ export class ReglementPage extends LitElement {
   }
 }
 
-@customElement("fortoyning-page")
-export class FortoyningPage extends LitElement {
-  public static styles = pageStyles;
-  public render() {
-    return html`<section class="page-section">
-      <h1 class="page-title">Fortøyning</h1>
-      <p class="lead-text">
-        Fortøyningsreglement presenteres her som del av den fornyede løsningen.
-      </p>
-    </section>`;
-  }
-}
 @customElement("beredskapsplan-page")
 export class BeredskapsplanPage extends LitElement {
   public static styles = pageStyles;
