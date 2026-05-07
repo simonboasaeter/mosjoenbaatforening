@@ -260,8 +260,6 @@ export class AvfallshandteringPage extends LitElement {
         }
         .side-image {
           display: block;
-          position: sticky;
-          top: 110px;
         }
       }
     `,
