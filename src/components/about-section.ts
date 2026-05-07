@@ -98,7 +98,7 @@ export class AboutSection extends LitElement {
       <section id="om-oss" class="about-section" aria-labelledby="about-title">
         <figure class="image-card">
           <img
-            src="./images/båtplass.jpg"
+            src="./images/dock.png"
             alt="Brygge og båter ved Mosjøen marina"
           />
         </figure>
