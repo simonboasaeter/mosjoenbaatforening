@@ -91,30 +91,256 @@ export class ReglementPage extends LitElement {
 
 @customElement("beredskapsplan-page")
 export class BeredskapsplanPage extends LitElement {
-  public static styles = pageStyles;
+  public static styles = [
+    pageStyles,
+    css`
+      .plan-subtitle {
+        margin: 0;
+        color: #0f172a;
+        font-size: 1.25rem;
+      }
+      .emergency-box {
+        margin-top: 20px;
+        background: #fee2e2;
+        border: 1px solid #fca5a5;
+        border-radius: 12px;
+        padding: 20px;
+      }
+      .emergency-title {
+        margin: 0 0 10px;
+        color: #7f1d1d;
+        font-size: 1.1rem;
+      }
+      .emergency-numbers {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .emergency-pill {
+        background: #b91c1c;
+        color: #fff;
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-weight: 700;
+      }
+      .plan-list {
+        margin: 8px 0 0;
+        padding-left: 20px;
+        line-height: 1.7;
+      }
+      .download-button {
+        display: inline-flex;
+        margin-top: 18px;
+        background: #0c4a6e;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 16px;
+        border-radius: 10px;
+        font-weight: 700;
+      }
+      .symbol-grid {
+        margin-top: 12px;
+        display: grid;
+        gap: 8px;
+      }
+      .symbol-item {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 10px 12px;
+      }
+    `,
+  ];
   public render() {
     return html`<section class="page-section">
       <h1 class="page-title">Beredskapsplan</h1>
       <p class="lead-text">
-        Beredskapsplan presenteres her som del av den fornyede løsningen.
+        Nåværende beredskapsplan kan du se nedenfor. Eller laste den ned som
+        PDF.
       </p>
+
+      <article class="content-card">
+        <h2 class="plan-subtitle">
+          Beredskapsplan for Mosjøen Båtforening (MBF)
+        </h2>
+
+        <div class="emergency-box" role="status" aria-live="polite">
+          <h3 class="emergency-title">Nødtelefon ved brann og ulykker</h3>
+          <div class="emergency-numbers">
+            <span class="emergency-pill">BRANN - 110</span>
+            <span class="emergency-pill">POLITI - 112</span>
+            <span class="emergency-pill">AMBULANSE - 113</span>
+          </div>
+        </div>
+
+        <h3>Ved brann</h3>
+        <ul class="plan-list">
+          <li>
+            Forsøk å slukke brannen (benytt utplassert brannvernsutstyr ved
+            nedgang til bryggene/klubbhus).
+          </li>
+          <li>Varsle andre som kan være i fare.</li>
+          <li>Forsøk å begrense fare for spredning av brannen.</li>
+          <li>Tilkall brannvesen.</li>
+        </ul>
+
+        <h3>Ved miljøforurensning / oljesøl. Akutte tiltak</h3>
+        <ul class="plan-list">
+          <li>Begrense omfanget av søl etter beste evne.</li>
+          <li>
+            Om mulig benytt oljeoppsamlings sand som står lagret ved miljøboden
+            i havnen.
+          </li>
+          <li>Ved større hendelser kontakt politi eller brannvesen.</li>
+          <li>Ved fare for liv og helse kontakt ambulanse.</li>
+        </ul>
+
+        <p>
+          <strong>Alle miljøhendelser skal rapporteres til havnesjefen!</strong>
+        </p>
+
+        <h3>Symbolforklaring – områdeoversikt</h3>
+        <div class="symbol-grid">
+          <div class="symbol-item">Brannslukningsapparat</div>
+          <div class="symbol-item">Oljevernberedskap</div>
+          <div class="symbol-item">Informasjonstavle</div>
+          <div class="symbol-item">Redningsbøye</div>
+        </div>
+
+        <a
+          class="download-button"
+          href="/beredskapsplan-mosjoen-baatforening.pdf"
+          aria-label="Last ned beredskapsplan som PDF"
+          download
+          >Last ned beredskapsplan</a
+        >
+      </article>
     </section>`;
   }
 }
 @customElement("avfallshandtering-page")
 export class AvfallshandteringPage extends LitElement {
-  public static styles = pageStyles;
+  public static styles = [
+    pageStyles,
+    css`
+      .waste-layout {
+        display: grid;
+        gap: 20px;
+      }
+      .side-image {
+        display: none;
+      }
+      .waste-image {
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        min-height: 220px;
+      }
+      .waste-list {
+        margin: 0;
+        padding-left: 20px;
+        line-height: 1.7;
+      }
+      .section-title {
+        margin-bottom: 8px;
+      }
+      .note-box {
+        margin-top: 16px;
+        background: #f1f5f9;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        padding: 12px 14px;
+      }
+      @media (min-width: 950px) {
+        .waste-layout {
+          grid-template-columns:
+            minmax(180px, 0.8fr) minmax(460px, 1.6fr)
+            minmax(180px, 0.8fr);
+          align-items: start;
+        }
+        .side-image {
+          display: block;
+          position: sticky;
+          top: 110px;
+        }
+      }
+    `,
+  ];
   public render() {
     return html`<section class="page-section">
       <h1 class="page-title">Avfallshåndtering</h1>
-      <p class="lead-text">
-        Retningslinjer for avfallshåndtering presenteres her som del av den
-        fornyede løsningen.
-      </p>
+      <div class="waste-layout">
+        <aside class="side-image" aria-hidden="true">
+          <img class="waste-image" src="/images/søppelforklaring.jpg" alt="" />
+        </aside>
+
+        <article class="content-card">
+          <h2>
+            Avfallshåndteringsplan for: Mosjøen Båtforening – Pålgarden marina
+          </h2>
+
+          <h3 class="section-title">Bakgrunn</h3>
+          <p>
+            Denne avfallsplanen kommer i tillegg til det generelle
+            havnereglementet. Hensikten er å sikre at foreningen og foreningens
+            medlemmer er kjent med hvordan man håndterer avfall på en god og
+            sikker måte og i henhold til gjeldende lovgivning og forskrifter.
+          </p>
+
+          <h3 class="section-title">Ansvarlig</h3>
+          <p>
+            Ansvar for revidering og oppdatering av denne planen påhviler det
+            til enhver tid det sittende styre i MBF ved styrets ledere.
+          </p>
+
+          <h3 class="section-title">Behov</h3>
+          <p>
+            MBF er en båtforening for beboerne i Vefsn-regionen. For tiden har
+            båtforeningen 196 båtplasser fordelt på 5 flytebrygger. Båtene
+            ligger ved faste plasser, i tillegg har vi en gjestebrygge for
+            besøkende.
+          </p>
+
+          <h3 class="section-title">Håndtering av avfall</h3>
+          <p>
+            Båtforeningens miljøbod er utstyrt med et system for kildesortering.
+            Systemet ivaretas av styrets 1. varamann. Foreningen har i dag
+            avtale med NordMiljø som sørger for tømming.
+          </p>
+
+          <h3 class="section-title">Spesialavfall</h3>
+          <p>
+            Ved sliping av maling / bunnstoff på MBF sin opplagsplass er båteier
+            pliktig til å legge ut presenning for å forhindre forurensing av
+            området. Det oppsamlede stoffet samles i miljøstasjonen på anvist
+            plass.
+          </p>
+
+          <h3 class="section-title">Septikktømming</h3>
+          <p>
+            Det er ikke tillatt å pumpe ut septikk i havnebassenget, foreningen
+            har ikke per dato mottaksanlegg på land.
+          </p>
+
+          <h3 class="section-title">SHMIL</h3>
+          <p>
+            SHMIL har satt ut dunker til fritidsrenovasjon. Her kan man levere
+            avfall, dunkene er plassert rett over vegen ved foreningens
+            klubbhus.
+          </p>
+
+          <p class="note-box">
+            <strong>SHMIL = Søndre Helgeland Miljøverk IKS</strong>
+          </p>
+        </article>
+
+        <aside class="side-image" aria-hidden="true">
+          <img class="waste-image" src="/images/kildesortering.jpg" alt="" />
+        </aside>
+      </div>
     </section>`;
   }
 }
-
 
 @customElement("historie-page")
 export class HistoriePage extends LitElement {
