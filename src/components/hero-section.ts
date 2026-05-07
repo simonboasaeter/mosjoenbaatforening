@@ -135,10 +135,8 @@ export class HeroSection extends LitElement {
             </p>
 
             <div class="hero-actions">
-              <a class="hero-link hero-link-primary" href="#">Bli medlem</a>
-              <a class="hero-link hero-link-secondary" href="#"
-                >Se ledige plasser</a
-              >
+              <a class="hero-link hero-link-primary" href="/organisering/kontaktpersoner">Kontakt oss</a>
+              <a class="hero-link hero-link-secondary" href="https://www.havneweb.no/mosjoenbf/?mod=sokplass" target="_blank" rel="noopener noreferrer">Bli medlem</a>
             </div>
           </div>
         </div>
