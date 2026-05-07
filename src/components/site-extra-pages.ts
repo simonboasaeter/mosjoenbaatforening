@@ -209,7 +209,7 @@ export class BeredskapsplanPage extends LitElement {
 
         <a
           class="download-button"
-          href="/beredskapsplan-mosjoen-baatforening.pdf"
+          href="/pdf/beredskapsplan.pdf"
           aria-label="Last ned beredskapsplan som PDF"
           download
           >Last ned beredskapsplan</a
@@ -234,7 +234,7 @@ export class AvfallshandteringPage extends LitElement {
         width: 100%;
         border-radius: 12px;
         object-fit: cover;
-        min-height: 220px;
+        min-height: 300px;
       }
       .waste-list {
         margin: 0;
@@ -254,14 +254,15 @@ export class AvfallshandteringPage extends LitElement {
       @media (min-width: 950px) {
         .waste-layout {
           grid-template-columns:
-            minmax(180px, 0.8fr) minmax(460px, 1.6fr)
-            minmax(180px, 0.8fr);
+            minmax(240px, 1fr) minmax(460px, 1.4fr)
+            minmax(240px, 1fr);
           align-items: start;
         }
         .side-image {
           display: block;
-          position: sticky;
-          top: 110px;
+        }
+        .waste-image {
+          min-height: 520px;
         }
       }
     `,
