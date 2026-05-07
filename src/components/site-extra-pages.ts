@@ -216,14 +216,120 @@ export class BeredskapsplanPage extends LitElement {
 }
 @customElement("avfallshandtering-page")
 export class AvfallshandteringPage extends LitElement {
-  public static styles = pageStyles;
+  public static styles = [
+    pageStyles,
+    css`
+      .waste-layout {
+        display: grid;
+        gap: 20px;
+      }
+      .waste-images {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: 1fr;
+      }
+      .waste-image {
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        min-height: 220px;
+      }
+      .waste-list {
+        margin: 0;
+        padding-left: 20px;
+        line-height: 1.7;
+      }
+      .section-title {
+        margin-bottom: 8px;
+      }
+      .note-box {
+        margin-top: 16px;
+        background: #f1f5f9;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        padding: 12px 14px;
+      }
+      @media (min-width: 950px) {
+        .waste-layout {
+          grid-template-columns: 1.3fr 1fr;
+          align-items: start;
+        }
+      }
+    `,
+  ];
   public render() {
     return html`<section class="page-section">
       <h1 class="page-title">Avfallshåndtering</h1>
-      <p class="lead-text">
-        Retningslinjer for avfallshåndtering presenteres her som del av den
-        fornyede løsningen.
-      </p>
+      <div class="waste-layout">
+        <article class="content-card">
+          <h2>Avfallshåndteringsplan for: Mosjøen Båtforening – Pålgarden marina</h2>
+
+          <h3 class="section-title">Bakgrunn</h3>
+          <p>
+            Denne avfallsplanen kommer i tillegg til det generelle
+            havnereglementet. Hensikten er å sikre at foreningen og foreningens
+            medlemmer er kjent med hvordan man håndterer avfall på en god og
+            sikker måte og i henhold til gjeldende lovgivning og forskrifter.
+          </p>
+
+          <h3 class="section-title">Ansvarlig</h3>
+          <p>
+            Ansvar for revidering og oppdatering av denne planen påhviler det
+            til enhver tid det sittende styre i MBF ved styrets ledere.
+          </p>
+
+          <h3 class="section-title">Behov</h3>
+          <p>
+            MBF er en båtforening for beboerne i Vefsn-regionen. For tiden har
+            båtforeningen 196 båtplasser fordelt på 5 flytebrygger. Båtene
+            ligger ved faste plasser, i tillegg har vi en gjestebrygge for
+            besøkende.
+          </p>
+
+          <h3 class="section-title">Håndtering av avfall</h3>
+          <p>
+            Båtforeningens miljøbod er utstyrt med et system for kildesortering.
+            Systemet ivaretas av styrets 1. varamann. Foreningen har i dag
+            avtale med NordMiljø som sørger for tømming.
+          </p>
+
+          <h3 class="section-title">Spesialavfall</h3>
+          <p>
+            Ved sliping av maling / bunnstoff på MBF sin opplagsplass er
+            båteier pliktig til å legge ut presenning for å forhindre
+            forurensing av området. Det oppsamlede stoffet samles i
+            miljøstasjonen på anvist plass.
+          </p>
+
+          <h3 class="section-title">Septikktømming</h3>
+          <p>
+            Det er ikke tillatt å pumpe ut septikk i havnebassenget, foreningen
+            har ikke per dato mottaksanlegg på land.
+          </p>
+
+          <h3 class="section-title">SHMIL</h3>
+          <p>
+            SHMIL har satt ut dunker til fritidsrenovasjon. Her kan man levere
+            avfall, dunkene er plassert rett over vegen ved foreningens
+            klubbhus.
+          </p>
+
+          <p class="note-box"><strong>SHMIL = Søndre Helgeland Miljøverk IKS</strong></p>
+        </article>
+
+        <aside class="waste-images" aria-label="Illustrasjoner av avfallsområde og havn">
+          <img
+            class="waste-image"
+            src="./images/oppstilling-landområde.jpeg"
+            alt="Oppstillingsområde i Mosjøen båtforening"
+          />
+          <img
+            class="waste-image"
+            src="./images/båtplass.jpg"
+            alt="Båtplasser i Mosjøen båtforening"
+          />
+        </aside>
+      </div>
     </section>`;
   }
 }
