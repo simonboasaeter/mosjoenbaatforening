@@ -28,7 +28,17 @@ export class SiteHeader extends LitElement {
       outline-offset: 2px;
     }
     .member-link { background: #dc2626; color: white; padding: 12px 18px; border-radius: 4px; font-size: 13px; font-weight: 800; text-transform: uppercase; text-decoration: none; }
-    .mobile-menu-button { display: none; background: transparent; border: 1px solid rgba(15, 23, 42, 0.2); border-radius: 8px; color: #0f172a; padding: 8px 10px; font-size: 14px; font-weight: 700; cursor: pointer; }
+    .mobile-menu-button { display: none; width: 44px; height: 44px; background: transparent; border: 1px solid rgba(15, 23, 42, 0.2); border-radius: 8px; color: #0f172a; cursor: pointer; align-items: center; justify-content: center; }
+    .mobile-menu-icon { position: relative; width: 20px; height: 14px; display: inline-block; }
+    .mobile-menu-icon::before,
+    .mobile-menu-icon::after,
+    .mobile-menu-icon span { content: ""; position: absolute; left: 0; width: 100%; height: 2px; background: currentColor; border-radius: 2px; transition: transform 0.2s ease, opacity 0.2s ease; }
+    .mobile-menu-icon::before { top: 0; }
+    .mobile-menu-icon span { top: 6px; }
+    .mobile-menu-icon::after { top: 12px; }
+    .mobile-menu-button[aria-expanded="true"] .mobile-menu-icon::before { transform: translateY(6px) rotate(45deg); }
+    .mobile-menu-button[aria-expanded="true"] .mobile-menu-icon span { opacity: 0; }
+    .mobile-menu-button[aria-expanded="true"] .mobile-menu-icon::after { transform: translateY(-6px) rotate(-45deg); }
     .mobile-nav { display: none; border-top: 1px solid rgba(15, 23, 42, 0.08); padding: 12px 24px 18px; }
     .mobile-nav-links { display: grid; gap: 6px; }
     .mobile-nav a { display: block; color: #0f172a; text-decoration: none; padding: 10px 0; font-size: 15px; font-weight: 600; }
@@ -73,8 +83,8 @@ export class SiteHeader extends LitElement {
           <div class="dropdown"><button class="dropdown-button" type="button">Reglement</button><div class="dropdown-menu"><a href="/reglement/hms-plan">HMS plan</a><a href="/reglement/fortoyning">Fortøyning</a><a href="/reglement/beredskapsplan">Beredskapsplan</a><a href="/reglement/avfallshandtering">Avfallshåndtering</a></div></div>
           <a href="/historie">Historie</a><a href="/webkamera">Webkamera</a>
         </nav>
-        <button class="mobile-menu-button" type="button" aria-expanded=${this.mobileMenuOpen ? "true" : "false"} aria-controls="mobile-navigation" @click=${this.toggleMobileMenu}>
-          Meny
+        <button class="mobile-menu-button" type="button" aria-label="Åpne meny" aria-expanded=${this.mobileMenuOpen ? "true" : "false"} aria-controls="mobile-navigation" @click=${this.toggleMobileMenu}>
+          <span class="mobile-menu-icon" aria-hidden="true"><span></span></span>
         </button>
         <a class="member-link" href="https://www.havneweb.no/mosjoenbf/?mod=sokplass" target="_blank" rel="noopener noreferrer">Bli medlem</a>
       </header>
@@ -105,7 +115,6 @@ export class SiteHeader extends LitElement {
           </details>
           <a href="/historie" @click=${this.closeMobileMenu}>Historie</a>
           <a href="/webkamera" @click=${this.closeMobileMenu}>Webkamera</a>
-          <a class="member-link" href="https://www.havneweb.no/mosjoenbf/?mod=sokplass" target="_blank" rel="noopener noreferrer">Bli medlem</a>
         </div>
       </nav>
     `;
