@@ -207,8 +207,7 @@ export class SiteFooter extends LitElement {
             <a href="/organisering/kontaktpersoner">Kontaktpersoner</a>
             <a href="/organisering/vedtekter">Vedtekter</a>
             <a href="/reglement/hms-plan">HMS plan</a>
-            <a href="#om-oss">Om oss</a>
-            <a href="#kontakt">Kontakt</a>
+            <a href="/organisering/kontaktpersoner">Kontakt</a>
           </nav>
         </section>
 
@@ -224,8 +223,12 @@ export class SiteFooter extends LitElement {
         <section>
           <h2>Følg oss</h2>
           <div class="social-links">
-            <a class="social-link" href="#" aria-label="Facebook">f</a>
-            <a class="social-link" href="#" aria-label="Instagram">◎</a>
+            <a
+              class="social-link"
+              href="https://www.facebook.com/profile.php?id=100064471488887"
+              aria-label="Facebook"
+              >f</a
+            >
           </div>
 
           <p class="copyright">
