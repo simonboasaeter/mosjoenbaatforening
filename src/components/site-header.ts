@@ -37,14 +37,11 @@ export class SiteHeader extends LitElement {
       line-height: 1.05;
     }
 
-    .brand-mark {
-      width: 44px;
-      height: 44px;
-      border: 3px solid currentColor;
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      font-size: 24px;
+    .brand-logo {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      border-radius: 8px;
     }
 
     .brand-text {
@@ -192,7 +189,7 @@ export class SiteHeader extends LitElement {
     return html`
       <header class="site-header">
         <a class="brand" href="/">
-          <span class="brand-mark" aria-hidden="true">⚓</span>
+          <img class="brand-logo" src="/images/logo.jpg" alt="Mosjøen Båtforening logo" />
           <span class="brand-text">
             <span class="brand-name">Mosjøen</span>
             <span class="brand-subtitle">Båtforening</span>

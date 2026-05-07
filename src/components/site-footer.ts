@@ -41,14 +41,12 @@ export class SiteFooter extends LitElement {
       line-height: 1.05;
     }
 
-    .brand-mark {
+    .brand-logo {
       width: 58px;
       height: 58px;
-      border: 3px solid white;
       border-radius: 999px;
-      display: grid;
-      place-items: center;
-      font-size: 30px;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.85);
     }
 
     .brand-name {
@@ -171,7 +169,7 @@ export class SiteFooter extends LitElement {
       <footer id="kontakt" class="site-footer">
         <section class="brand" aria-label="Mosjøen Båtforening">
           <div class="brand-row">
-            <span class="brand-mark" aria-hidden="true">⚓</span>
+            <img class="brand-logo" src="/images/logo.jpg" alt="Mosjøen Båtforening logo" />
             <span>
               <span class="brand-name">Mosjøen</span><br />
               <span class="brand-subtitle">Båtforening</span>
@@ -200,6 +198,7 @@ export class SiteFooter extends LitElement {
             <a href="/">Hjem</a>
             <a href="/organisering/kontaktpersoner">Kontaktpersoner</a>
             <a href="/organisering/vedtekter">Vedtekter</a>
+            <a href="/reglement/hms-plan">HMS plan</a>
             <a href="#om-oss">Om oss</a>
             <a href="#kontakt">Kontakt</a>
           </nav>
