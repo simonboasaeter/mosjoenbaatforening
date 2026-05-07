@@ -8,6 +8,7 @@ import "./components/site-footer";
 import "./components/kontaktpersoner-page";
 import "./components/vedtekter-page";
 import "./components/informasjon-pages";
+import "./components/site-extra-pages";
 
 @customElement("landing-page")
 export class LandingPage extends LitElement {
@@ -54,10 +55,22 @@ export class LandingPage extends LitElement {
                       ? html`<vare-priser-page></vare-priser-page>`
                       : pathName === "/informasjon/bilder"
                         ? html`<bilder-page></bilder-page>`
-                        : html`
-                            <hero-section></hero-section>
-                            <about-section></about-section>
-                          `}
+                        : pathName === "/reglement" || pathName === "/reglement/hms-plan"
+                          ? html`<reglement-page></reglement-page>`
+                          : pathName === "/reglement/fortoyning"
+                            ? html`<fortoyning-page></fortoyning-page>`
+                            : pathName === "/reglement/beredskapsplan"
+                              ? html`<beredskapsplan-page></beredskapsplan-page>`
+                              : pathName === "/reglement/avfallshandtering"
+                                ? html`<avfallshandtering-page></avfallshandtering-page>`
+                                : pathName === "/historie"
+                              ? html`<historie-page></historie-page>`
+                              : pathName === "/webkamera"
+                                ? html`<webkamera-page></webkamera-page>`
+                                : html`
+                                    <hero-section></hero-section>
+                                    <about-section></about-section>
+                                  `}
       </main>
 
       <site-footer></site-footer>

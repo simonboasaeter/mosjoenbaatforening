@@ -127,6 +127,7 @@ export class AvfallshandteringPage extends LitElement {
   }
 }
 
+
 @customElement("historie-page")
 export class HistoriePage extends LitElement {
   public static styles = [
