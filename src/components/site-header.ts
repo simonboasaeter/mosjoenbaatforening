@@ -248,6 +248,33 @@ export class SiteHeader extends LitElement {
               >
             </div>
           </div>
+          <div class="dropdown">
+            <button class="dropdown-button" type="button">Reglement</button>
+            <div class="dropdown-menu" role="menu" aria-label="Reglement">
+              <a href="/reglement/hms-plan" role="menuitem">HMS plan</a>
+              <a href="/reglement/fortoyning" role="menuitem">Fortøyning</a>
+              <a href="/reglement/beredskapsplan" role="menuitem">Beredskapsplan</a>
+              <a href="/reglement/avfallshandtering" role="menuitem">Avfallshåndtering</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-button" type="button">Linker</button>
+            <div class="dropdown-menu" role="menu" aria-label="Linker">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener" role="menuitem">MBF – Facebook</a>
+              <a href="https://www.yr.no/nb" target="_blank" rel="noopener" role="menuitem">Tidevann – Mosjøen</a>
+              <a href="https://www.redningsselskapet.no" target="_blank" rel="noopener" role="menuitem">Redningsselskapet</a>
+              <a href="https://www.velihavn.no" target="_blank" rel="noopener" role="menuitem">Vel i Havn</a>
+              <a href="https://www.knbf.no" target="_blank" rel="noopener" role="menuitem">KNBF</a>
+            </div>
+          </div>
+          <a href="/historie">Historie</a>
+          <div class="dropdown">
+            <button class="dropdown-button" type="button">Webkamera</button>
+            <div class="dropdown-menu" role="menu" aria-label="Webkamera">
+              <a href="/webkamera" role="menuitem">Direkte kamera</a>
+            </div>
+          </div>
+          </div>
         </nav>
 
         <div class="actions">
