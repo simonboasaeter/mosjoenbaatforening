@@ -45,7 +45,7 @@ export class VedtekterPage extends LitElement {
     return html`<section aria-labelledby="vedtekter-title">
       <h1 id="vedtekter-title">Vedtekter - Mosjøen båtforening</h1>
       <p>Nedenfor kan du laste ned våre vedtekter som PDF</p>
-      <a class="button" href="/vedtekter-mosjoen-baatforening.pdf" download
+      <a class="button" href="/pdf/vedtekter.pdf" download
         >Last ned vedtekter (PDF)</a
       >
     </section>`;
