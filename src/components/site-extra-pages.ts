@@ -223,10 +223,8 @@ export class AvfallshandteringPage extends LitElement {
         display: grid;
         gap: 20px;
       }
-      .waste-images {
-        display: grid;
-        gap: 12px;
-        grid-template-columns: 1fr;
+      .side-image {
+        display: none;
       }
       .waste-image {
         width: 100%;
@@ -251,8 +249,13 @@ export class AvfallshandteringPage extends LitElement {
       }
       @media (min-width: 950px) {
         .waste-layout {
-          grid-template-columns: 1.3fr 1fr;
+          grid-template-columns: minmax(180px, 0.8fr) minmax(460px, 1.6fr) minmax(180px, 0.8fr);
           align-items: start;
+        }
+        .side-image {
+          display: block;
+          position: sticky;
+          top: 110px;
         }
       }
     `,
@@ -261,6 +264,14 @@ export class AvfallshandteringPage extends LitElement {
     return html`<section class="page-section">
       <h1 class="page-title">Avfallshåndtering</h1>
       <div class="waste-layout">
+        <aside class="side-image" aria-hidden="true">
+          <img
+            class="waste-image"
+            src="./images/søppelforklaring.jpg"
+            alt=""
+          />
+        </aside>
+
         <article class="content-card">
           <h2>Avfallshåndteringsplan for: Mosjøen Båtforening – Pålgarden marina</h2>
 
@@ -317,16 +328,11 @@ export class AvfallshandteringPage extends LitElement {
           <p class="note-box"><strong>SHMIL = Søndre Helgeland Miljøverk IKS</strong></p>
         </article>
 
-        <aside class="waste-images" aria-label="Illustrasjoner av avfallsområde og havn">
+        <aside class="side-image" aria-hidden="true">
           <img
             class="waste-image"
-            src="./images/oppstilling-landområde.jpeg"
-            alt="Oppstillingsområde i Mosjøen båtforening"
-          />
-          <img
-            class="waste-image"
-            src="./images/båtplass.jpg"
-            alt="Båtplasser i Mosjøen båtforening"
+            src="./images/kildesortering.jpg"
+            alt=""
           />
         </aside>
       </div>
