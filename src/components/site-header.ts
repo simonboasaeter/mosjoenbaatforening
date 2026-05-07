@@ -232,10 +232,6 @@ export class SiteHeader extends LitElement {
               >
               <a href="/informasjon/vare-priser" role="menuitem">Våre priser</a>
               <a href="/informasjon/bilder" role="menuitem">Bilder</a>
-              <a href="/reglement" role="menuitem">Reglement</a>
-              <a href="/linker" role="menuitem">Linker</a>
-              <a href="/historie" role="menuitem">Historie</a>
-              <a href="/webkamera" role="menuitem">Webkamera</a>
               <a
                 href="https://www.havneweb.no/mosjoenbf/?mod=sokplass"
                 target="_blank"
@@ -272,12 +268,8 @@ export class SiteHeader extends LitElement {
             </div>
           </div>
           <a href="/historie">Historie</a>
-          <div class="dropdown">
-            <button class="dropdown-button" type="button">Webkamera</button>
-            <div class="dropdown-menu" role="menu" aria-label="Webkamera">
-              <a href="/webkamera" role="menuitem">Direkte kamera</a>
-            </div>
-          </div>
+          <a href="/webkamera" role="menuitem">Webkamera</a>
+
           </div>
         </nav>
 
