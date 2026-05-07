@@ -175,7 +175,11 @@ export class SiteFooter extends LitElement {
       <footer id="kontakt" class="site-footer">
         <section class="brand" aria-label="Mosjøen Båtforening">
           <div class="brand-row">
-            <img class="brand-logo" src="/images/logo.jpg" alt="Mosjøen Båtforening logo" />
+            <img
+              class="brand-logo"
+              src="/images/logo.jpg"
+              alt="Mosjøen Båtforening logo"
+            />
             <span>
               <span class="brand-name">Mosjøen</span><br />
               <span class="brand-subtitle">Båtforening</span>
@@ -189,12 +193,10 @@ export class SiteFooter extends LitElement {
         <section>
           <h2>Sentralt plassert</h2>
           <address>
-            <span
-              >Mosjøen small boat marina<br />Ørbradden 10, 8663 Mosjøen</span
-            >
+            <span>Mosjøen Båtforening<br />Ørbradden 10, 8663 Mosjøen</span>
             <span>2 min fra Mosjøen sentrum<br />Gratis parkering</span>
-            <span>+47 90 12 34 56</span>
-            <span>post@mosjoen-batforening.no</span>
+            <span>+47 902 60 515</span>
+            <span>post@mosjoenbf.no</span>
           </address>
         </section>
 
