@@ -209,7 +209,7 @@ export class BeredskapsplanPage extends LitElement {
 
         <a
           class="download-button"
-          href="/beredskapsplan-mosjoen-baatforening.pdf"
+          href="/beredskapsplan.pdf"
           aria-label="Last ned beredskapsplan som PDF"
           download
           >Last ned beredskapsplan</a

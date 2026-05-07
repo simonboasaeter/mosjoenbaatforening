@@ -70,7 +70,7 @@ export class HmsPlanPage extends LitElement {
       </p>
       <a
         class="download-button"
-        href="/hms-plan.pdf"
+        href="/hms-plan2018.pdf"
         download
         aria-label="Last ned HMS plan som PDF"
         >Last ned HMS plan (PDF)</a
