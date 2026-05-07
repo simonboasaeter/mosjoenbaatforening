@@ -13,10 +13,13 @@ export class SiteHeader extends LitElement {
     .brand-subtitle { font-size: 13px; letter-spacing: 0.16em; }
     .navigation { display: flex; align-items: center; gap: 20px; font-size: 14px; font-weight: 600; flex-wrap: wrap; }
     .navigation a, .dropdown-button { color: #0f172a; text-decoration: none; background: transparent; border: 0; font: inherit; cursor: pointer; padding: 0; }
+    .dropdown-button { display: inline-flex; align-items: center; gap: 6px; }
+    .dropdown-button::after { content: "▾"; font-size: 12px; line-height: 1; color: #475569; transform: translateY(-1px); }
     .dropdown { position: relative; }
     .dropdown::after { content: ""; position: absolute; inset: 100% 0 auto; height: 12px; }
     .dropdown-menu { position: absolute; top: calc(100% + 8px); left: 0; min-width: 220px; background: white; border: 1px solid rgba(15, 23, 42, 0.12); border-radius: 8px; box-shadow: 0 12px 26px rgba(15, 23, 42, 0.16); padding: 8px; display: none; z-index: 30; }
     .dropdown:hover .dropdown-menu, .dropdown:focus-within .dropdown-menu { display: grid; gap: 4px; }
+    .dropdown:hover .dropdown-button::after, .dropdown:focus-within .dropdown-button::after { transform: rotate(180deg) translateY(1px); }
     .dropdown-menu a { padding: 10px 12px; border-radius: 6px; display: block; }
     .dropdown-menu a:hover, .dropdown-menu a:focus-visible, .member-link:focus-visible, .navigation a:focus-visible, .dropdown-button:focus-visible { outline: 2px solid #082f49; outline-offset: 2px; }
     .member-link { background: #dc2626; color: white; padding: 12px 18px; border-radius: 4px; font-size: 13px; font-weight: 800; text-transform: uppercase; text-decoration: none; }
