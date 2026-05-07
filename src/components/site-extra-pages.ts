@@ -160,7 +160,9 @@ export class BeredskapsplanPage extends LitElement {
       </p>
 
       <article class="content-card">
-        <h2 class="plan-subtitle">Beredskapsplan for Mosjøen Båtforening (MBF)</h2>
+        <h2 class="plan-subtitle">
+          Beredskapsplan for Mosjøen Båtforening (MBF)
+        </h2>
 
         <div class="emergency-box" role="status" aria-live="polite">
           <h3 class="emergency-title">Nødtelefon ved brann og ulykker</h3>
@@ -193,7 +195,9 @@ export class BeredskapsplanPage extends LitElement {
           <li>Ved fare for liv og helse kontakt ambulanse.</li>
         </ul>
 
-        <p><strong>Alle miljøhendelser skal rapporteres til havnesjefen!</strong></p>
+        <p>
+          <strong>Alle miljøhendelser skal rapporteres til havnesjefen!</strong>
+        </p>
 
         <h3>Symbolforklaring – områdeoversikt</h3>
         <div class="symbol-grid">
@@ -249,7 +253,9 @@ export class AvfallshandteringPage extends LitElement {
       }
       @media (min-width: 950px) {
         .waste-layout {
-          grid-template-columns: minmax(180px, 0.8fr) minmax(460px, 1.6fr) minmax(180px, 0.8fr);
+          grid-template-columns:
+            minmax(180px, 0.8fr) minmax(460px, 1.6fr)
+            minmax(180px, 0.8fr);
           align-items: start;
         }
         .side-image {
@@ -265,15 +271,13 @@ export class AvfallshandteringPage extends LitElement {
       <h1 class="page-title">Avfallshåndtering</h1>
       <div class="waste-layout">
         <aside class="side-image" aria-hidden="true">
-          <img
-            class="waste-image"
-            src="./images/søppelforklaring.jpg"
-            alt=""
-          />
+          <img class="waste-image" src="/images/søppelforklaring.jpg" alt="" />
         </aside>
 
         <article class="content-card">
-          <h2>Avfallshåndteringsplan for: Mosjøen Båtforening – Pålgarden marina</h2>
+          <h2>
+            Avfallshåndteringsplan for: Mosjøen Båtforening – Pålgarden marina
+          </h2>
 
           <h3 class="section-title">Bakgrunn</h3>
           <p>
@@ -306,10 +310,10 @@ export class AvfallshandteringPage extends LitElement {
 
           <h3 class="section-title">Spesialavfall</h3>
           <p>
-            Ved sliping av maling / bunnstoff på MBF sin opplagsplass er
-            båteier pliktig til å legge ut presenning for å forhindre
-            forurensing av området. Det oppsamlede stoffet samles i
-            miljøstasjonen på anvist plass.
+            Ved sliping av maling / bunnstoff på MBF sin opplagsplass er båteier
+            pliktig til å legge ut presenning for å forhindre forurensing av
+            området. Det oppsamlede stoffet samles i miljøstasjonen på anvist
+            plass.
           </p>
 
           <h3 class="section-title">Septikktømming</h3>
@@ -325,21 +329,18 @@ export class AvfallshandteringPage extends LitElement {
             klubbhus.
           </p>
 
-          <p class="note-box"><strong>SHMIL = Søndre Helgeland Miljøverk IKS</strong></p>
+          <p class="note-box">
+            <strong>SHMIL = Søndre Helgeland Miljøverk IKS</strong>
+          </p>
         </article>
 
         <aside class="side-image" aria-hidden="true">
-          <img
-            class="waste-image"
-            src="./images/kildesortering.jpg"
-            alt=""
-          />
+          <img class="waste-image" src="/images/kildesortering.jpg" alt="" />
         </aside>
       </div>
     </section>`;
   }
 }
-
 
 @customElement("historie-page")
 export class HistoriePage extends LitElement {
