@@ -70,7 +70,7 @@ export class HmsPlanPage extends LitElement {
       </p>
       <a
         class="download-button"
-        href="/hms-plan2018.pdf"
+        href="/pdf/hms-plan2018.pdf"
         download
         aria-label="Last ned HMS plan som PDF"
         >Last ned HMS plan (PDF)</a
@@ -105,15 +105,15 @@ export class HmsPlanPage extends LitElement {
 
         <h3>Håndtering av beredskapshendelser</h3>
         <p>
-          Håndtering av beredskapshendelser er beskrevet i foreningens til enhver
-          tid gjeldende Beredskapsplan Mosjøen, september 2012
+          Håndtering av beredskapshendelser er beskrevet i foreningens til
+          enhver tid gjeldende Beredskapsplan Mosjøen, september 2012
         </p>
 
         <h3>Sikkerhetsutstyr</h3>
         <p>
-          Styret har ansvaret for at nødvendig sikkerhetsutstyr til enhver tid er
-          tilgjengelig i havneområdet. Den til enhver tid sittende havnesjef har
-          ansvaret for oppsyn av sikkerhetsutstyret.
+          Styret har ansvaret for at nødvendig sikkerhetsutstyr til enhver tid
+          er tilgjengelig i havneområdet. Den til enhver tid sittende havnesjef
+          har ansvaret for oppsyn av sikkerhetsutstyret.
         </p>
 
         <h3>Redningsbåt</h3>
@@ -139,8 +139,8 @@ export class HmsPlanPage extends LitElement {
 
         <h3>Oljevernberedskap</h3>
         <p>
-          Det er utplassert oljeoppsamlingsutstyr ved miljøbod. Det er utplassert
-          presenninger til bruker under båter ved slipe/skrape og
+          Det er utplassert oljeoppsamlingsutstyr ved miljøbod. Det er
+          utplassert presenninger til bruker under båter ved slipe/skrape og
           malingsaktiviteter på opplagsplassen for å unngå forurensning av
           grunnen.
         </p>
@@ -163,7 +163,9 @@ export class HmsPlanPage extends LitElement {
         <h3>Referanser</h3>
         <ul>
           <li>Kjemikalieforssriften.</li>
-          <li>Forskrift om klassifisering, merking mv. av farlige kjemikalier.</li>
+          <li>
+            Forskrift om klassifisering, merking mv. av farlige kjemikalier.
+          </li>
           <li>Stoffkartotekforskriften</li>
           <li>Brannvernloven</li>
           <li>Forurensningsloven</li>
