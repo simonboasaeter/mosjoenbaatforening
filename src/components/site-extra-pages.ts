@@ -91,13 +91,126 @@ export class ReglementPage extends LitElement {
 
 @customElement("beredskapsplan-page")
 export class BeredskapsplanPage extends LitElement {
-  public static styles = pageStyles;
+  public static styles = [
+    pageStyles,
+    css`
+      .plan-subtitle {
+        margin: 0;
+        color: #0f172a;
+        font-size: 1.25rem;
+      }
+      .emergency-box {
+        margin-top: 20px;
+        background: #fee2e2;
+        border: 1px solid #fca5a5;
+        border-radius: 12px;
+        padding: 20px;
+      }
+      .emergency-title {
+        margin: 0 0 10px;
+        color: #7f1d1d;
+        font-size: 1.1rem;
+      }
+      .emergency-numbers {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .emergency-pill {
+        background: #b91c1c;
+        color: #fff;
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-weight: 700;
+      }
+      .plan-list {
+        margin: 8px 0 0;
+        padding-left: 20px;
+        line-height: 1.7;
+      }
+      .download-button {
+        display: inline-flex;
+        margin-top: 18px;
+        background: #0c4a6e;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 16px;
+        border-radius: 10px;
+        font-weight: 700;
+      }
+      .symbol-grid {
+        margin-top: 12px;
+        display: grid;
+        gap: 8px;
+      }
+      .symbol-item {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 10px 12px;
+      }
+    `,
+  ];
   public render() {
     return html`<section class="page-section">
       <h1 class="page-title">Beredskapsplan</h1>
       <p class="lead-text">
-        Beredskapsplan presenteres her som del av den fornyede løsningen.
+        Nåværende beredskapsplan kan du se nedenfor. Eller laste den ned som
+        PDF.
       </p>
+
+      <article class="content-card">
+        <h2 class="plan-subtitle">Beredskapsplan for Mosjøen Båtforening (MBF)</h2>
+
+        <div class="emergency-box" role="status" aria-live="polite">
+          <h3 class="emergency-title">Nødtelefon ved brann og ulykker</h3>
+          <div class="emergency-numbers">
+            <span class="emergency-pill">BRANN - 110</span>
+            <span class="emergency-pill">POLITI - 112</span>
+            <span class="emergency-pill">AMBULANSE - 113</span>
+          </div>
+        </div>
+
+        <h3>Ved brann</h3>
+        <ul class="plan-list">
+          <li>
+            Forsøk å slukke brannen (benytt utplassert brannvernsutstyr ved
+            nedgang til bryggene/klubbhus).
+          </li>
+          <li>Varsle andre som kan være i fare.</li>
+          <li>Forsøk å begrense fare for spredning av brannen.</li>
+          <li>Tilkall brannvesen.</li>
+        </ul>
+
+        <h3>Ved miljøforurensning / oljesøl. Akutte tiltak</h3>
+        <ul class="plan-list">
+          <li>Begrense omfanget av søl etter beste evne.</li>
+          <li>
+            Om mulig benytt oljeoppsamlings sand som står lagret ved miljøboden
+            i havnen.
+          </li>
+          <li>Ved større hendelser kontakt politi eller brannvesen.</li>
+          <li>Ved fare for liv og helse kontakt ambulanse.</li>
+        </ul>
+
+        <p><strong>Alle miljøhendelser skal rapporteres til havnesjefen!</strong></p>
+
+        <h3>Symbolforklaring – områdeoversikt</h3>
+        <div class="symbol-grid">
+          <div class="symbol-item">Brannslukningsapparat</div>
+          <div class="symbol-item">Oljevernberedskap</div>
+          <div class="symbol-item">Informasjonstavle</div>
+          <div class="symbol-item">Redningsbøye</div>
+        </div>
+
+        <a
+          class="download-button"
+          href="/beredskapsplan-mosjoen-baatforening.pdf"
+          aria-label="Last ned beredskapsplan som PDF"
+          download
+          >Last ned beredskapsplan</a
+        >
+      </article>
     </section>`;
   }
 }
