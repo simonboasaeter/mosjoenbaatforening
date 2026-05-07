@@ -61,6 +61,10 @@ export class LandingPage extends LitElement {
                           ? html`<hms-plan-page></hms-plan-page>`
                           : pathName === "/reglement/fortoyning"
                             ? html`<fortoyning-page></fortoyning-page>`
+                            : pathName === "/reglement/beredskapsplan"
+                              ? html`<beredskapsplan-page></beredskapsplan-page>`
+                              : pathName === "/reglement/avfallshandtering"
+                                ? html`<avfallshandtering-page></avfallshandtering-page>`
                           : pathName === "/linker"
                             ? html`<severdigheter-page></severdigheter-page>`
                             : pathName === "/historie"
