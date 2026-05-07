@@ -66,14 +66,14 @@ export class FortoyningPage extends LitElement {
         </p>
 
         <article class="content-row">
-          <img
-            src="/images/fortøyningsprinsipp.png"
-            alt="Skisse med fortøyningsbeskrivelse"
-          />
           <p>
             Her ser dere en skisse med fortøningsbeskrivelse for alle som har
             båt i Mosjøen båtforening (Pålgarden marina)
           </p>
+          <img
+            src="/images/fortøyningsprinsipp.png"
+            alt="Skisse med fortøyningsbeskrivelse"
+          />
         </article>
       </section>
     `;
