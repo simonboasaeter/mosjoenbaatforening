@@ -257,7 +257,6 @@ export class SiteHeader extends LitElement {
           <div class="dropdown">
             <button class="dropdown-button" type="button">Linker</button>
             <div class="dropdown-menu" role="menu" aria-label="Linker">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener" role="menuitem">MBF – Facebook</a>
               <a href="https://www.yr.no/nb" target="_blank" rel="noopener" role="menuitem">Tidevann – Mosjøen</a>
               <a href="https://www.redningsselskapet.no" target="_blank" rel="noopener" role="menuitem">Redningsselskapet</a>
               <a href="https://www.velihavn.no" target="_blank" rel="noopener" role="menuitem">Vel i Havn</a>
@@ -272,7 +271,6 @@ export class SiteHeader extends LitElement {
 
         <div class="actions">
           <a class="member-link" href="#">Bli medlem</a>
-          <a class="social-link" href="#" aria-label="Facebook">f</a>
         </div>
       </header>
     `;
