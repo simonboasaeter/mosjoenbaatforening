@@ -9,6 +9,7 @@ import "./components/kontaktpersoner-page";
 import "./components/vedtekter-page";
 import "./components/informasjon-pages";
 import "./components/site-extra-pages";
+import "./components/hms-plan-page";
 
 @customElement("landing-page")
 export class LandingPage extends LitElement {
@@ -55,8 +56,8 @@ export class LandingPage extends LitElement {
                       ? html`<vare-priser-page></vare-priser-page>`
                       : pathName === "/informasjon/bilder"
                         ? html`<bilder-page></bilder-page>`
-                        : pathName === "/reglement"
-                          ? html`<reglement-page></reglement-page>`
+                        : pathName === "/reglement/hms-plan"
+                          ? html`<hms-plan-page></hms-plan-page>`
                           : pathName === "/linker"
                             ? html`<severdigheter-page></severdigheter-page>`
                             : pathName === "/historie"
