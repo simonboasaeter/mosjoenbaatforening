@@ -271,12 +271,7 @@ export class SiteHeader extends LitElement {
               <a href="https://www.knbf.no" target="_blank" rel="noopener" role="menuitem">KNBF</a>
             </div>
           </div>
-          <div class="dropdown">
-            <button class="dropdown-button" type="button">Historie</button>
-            <div class="dropdown-menu" role="menu" aria-label="Historie">
-              <a href="/historie" role="menuitem">Foreningens historie</a>
-            </div>
-          </div>
+          <a href="/historie">Historie</a>
           <div class="dropdown">
             <button class="dropdown-button" type="button">Webkamera</button>
             <div class="dropdown-menu" role="menu" aria-label="Webkamera">
