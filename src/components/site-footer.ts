@@ -118,6 +118,12 @@ export class SiteFooter extends LitElement {
       object-fit: cover;
     }
 
+    .map-card iframe {
+      width: 100%;
+      min-height: 230px;
+      border: 0;
+    }
+
     .social-links {
       display: flex;
       gap: 14px;
@@ -207,10 +213,7 @@ export class SiteFooter extends LitElement {
         <figure class="map-card">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1632.1040360421778!2d13.193770700000002!3d65.85374519999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46745a71368fc4cf%3A0x4f6c7ac7abad6dc4!2sMosjoen%20small%20boat%20marina!5e0!3m2!1sen!2sno!4v1778073269583!5m2!1sen!2sno"
-            width="600"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
+            allowfullscreen
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
@@ -224,7 +227,7 @@ export class SiteFooter extends LitElement {
           </div>
 
           <p class="copyright">
-            © 2024 Mosjøen Båtforening<br />
+            © 2026 Mosjøen Båtforening<br />
             Alle rettigheter reservert.
           </p>
         </section>
